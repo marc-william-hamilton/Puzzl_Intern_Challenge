@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('.static',filename='style.css') }}">
+    <title>Rock Paper Scissors Game</title>
+</head>
+
+<body>
+
+    <h1>Welcome to this Rock Paper Scissors Game!</h1>
+    <h2>Choose again to play another game</h2>
+
+    <form action="{{ url_for('rock') }}" method="post">
+        <button type="submit">🪨</button>
+    </form>
+    <form action="{{ url_for('paper') }}" method="post">
+        <button type="submit">📄</button>
+    </form>
+    <form action="{{ url_for('scissors') }}" method="post">
+        <button type="submit">✂️</button><br>
+    </form>
+
+    <h3>{{player_choice}} vs {{opponent_choice}}</h3>
+    <h3>{{result}}</h3>
+
+
+</body>
+
+</html>

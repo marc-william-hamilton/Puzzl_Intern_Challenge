@@ -1,7 +1,7 @@
 from random import choice
 
 # a dictionary where key beats value
-roshambo = {"rock": "scissors", "paper": "rock", "scissors": "paper"}
+winners = {"rock": "scissors", "paper": "rock", "scissors": "paper"}
 
 
 def get_player_choice():
@@ -26,13 +26,13 @@ def get_player_choice():
 
 
 def get_opponent_choice():
-    return choice(list(roshambo))
+    return choice(list(winners))
 
 
 def determine_winner(player_choice, opponent_choice):
     if player_choice == opponent_choice:
         return "You drew 🤠"
-    elif roshambo[player_choice] == opponent_choice:
+    elif winners[player_choice] == opponent_choice:
         return "You won 🎉"
     else:
         return "You lost 😓"
